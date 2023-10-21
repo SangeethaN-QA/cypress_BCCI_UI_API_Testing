@@ -1,0 +1,34 @@
+{
+    
+        "icon_Search": "button#search",
+        "txt_SearchBox" : "input#searchInputForHeader",
+        "btn_Search" : "//button[contains(text(),'Search')]",
+        "page_Search": "//h1[contains(text(),'Search Results')]",
+        "play_Video" : "//div[@id='videosData']/div[1]/a[@class='playerpopup']/img",
+        "icon_Close" : "//div[@class='modal-dialog position-relative']/button[@class='btn-close']",
+        "icon_CloseHome" : "//button[@class='close-button page-close']",
+
+        "___________Comment" : "_______ODI Team Rankins____________",
+        "menu_Rankings" : "//div[@id='imw-international-men']//a[@data-element_text='Rankings']",
+        "btn_ODI" : "//button[@data-format='odi']",
+        "country1" : "//div[contains(@class,'ranking-data-table')]/..//tr[1]//td/h6",
+        "country2" : "//div[contains(@class,'ranking-data-table')]/..//tr[2]//td/h6",
+        "country3" : "//div[contains(@class,'ranking-data-table')]/..//tr[3]//td/h6",
+        "country4" : "//div[contains(@class,'ranking-data-table')]/..//tr[4]//td/h6",
+        "country5" : "//div[contains(@class,'ranking-data-table')]/..//tr[5]//td/h6",
+        "country6" : "//div[contains(@class,'ranking-data-table')]/..//tr[6]//td/h6",
+        "country7" : "//div[contains(@class,'ranking-data-table')]/..//tr[7]//td/h6",
+        "country8" : "//div[contains(@class,'ranking-data-table')]/..//tr[8]//td/h6",
+        "country9" : "//div[contains(@class,'ranking-data-table')]/..//tr[9]//td/h6",
+
+        "_______Comment" : "__________ODI Player Rankings_____________",
+        "arrow_playerRankings" : "//button[contains(@class,'content-end arrow-rank')]",
+        "lnk_Batting" : "//a[@data-slug='batting']"
+        
+
+
+       
+
+      
+
+}

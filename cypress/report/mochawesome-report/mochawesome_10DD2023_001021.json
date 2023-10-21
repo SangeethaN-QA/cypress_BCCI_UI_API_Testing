@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-20T19:15:35.088Z",
+    "end": "2023-10-20T19:16:21.725Z",
+    "duration": 46637,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8a92367-46e4-443c-a056-9796b1f38ae4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testCases\\bcciCricketSampleTCs.cy.js",
+      "file": "cypress\\e2e\\testCases\\bcciCricketSampleTCs.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1011f46-5ae6-4c94-9c46-ba40e611a38f",
+          "title": "BCCI web application Sample Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-01 Search Functionality",
+              "fullTitle": "BCCI web application Sample Test Cases TC-01 Search Functionality",
+              "timedOut": null,
+              "duration": 11850,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(objRepo.icon_Search).click();\ncy.get(objRepo.txt_SearchBox).type(testData.search_Data);\ncy.xpath(objRepo.btn_Search).click();\ncy.xpath(objRepo.page_Search).should('have.text', 'Search Results');",
+              "err": {},
+              "uuid": "29541ca0-1c6a-4554-923c-894f405d58a8",
+              "parentUUID": "e1011f46-5ae6-4c94-9c46-ba40e611a38f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-02 Play Search Result Video",
+              "fullTitle": "BCCI web application Sample Test Cases TC-02 Play Search Result Video",
+              "timedOut": null,
+              "duration": 10120,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(objRepo.icon_Search).click();\ncy.get(objRepo.txt_SearchBox).type(testData.search_Data);\ncy.xpath(objRepo.btn_Search).click();\ncy.xpath(objRepo.page_Search).should('have.text', 'Search Results');\ncy.xpath(objRepo.play_Video).click({\n  force: true\n});\ncy.wait(5000);\ncy.xpath(objRepo.icon_Close).click();",
+              "err": {},
+              "uuid": "a702797e-766f-47b9-9ae2-f6d813536065",
+              "parentUUID": "e1011f46-5ae6-4c94-9c46-ba40e611a38f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-03 Get ODI Team Rankings list",
+              "fullTitle": "BCCI web application Sample Test Cases TC-03 Get ODI Team Rankings list",
+              "timedOut": null,
+              "duration": 11338,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const countryNames = {\n  Country_1: 'Pakistan',\n  Country_2: 'South Africa',\n  Country_3: 'India',\n  Country_4: 'New Zealand',\n  Country_5: 'West Indies',\n  Country_6: 'Sri Lanka',\n  Country_7: 'Bangladesh',\n  Country_8: 'Thailand',\n  Country_9: 'Australia'\n};\ncy.xpath(objRepo.menu_Rankings).click();\ncy.xpath(objRepo.btn_ODI).click();\ncy.xpath(objRepo.country1).should('have.text', countryNames.Country_1);\ncy.xpath(objRepo.country2).should('have.text', countryNames.Country_2);\ncy.xpath(objRepo.country3).should('have.text', countryNames.Country_3);\ncy.xpath(objRepo.country4).should('have.text', countryNames.Country_4);\ncy.xpath(objRepo.country5).should('have.text', countryNames.Country_5);\ncy.xpath(objRepo.country6).should('have.text', countryNames.Country_6);\ncy.xpath(objRepo.country7).should('have.text', countryNames.Country_7);\ncy.xpath(objRepo.country8).should('have.text', countryNames.Country_8);\ncy.xpath(objRepo.country9).should('have.text', countryNames.Country_9);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h6>' to have text 'India', but the text was 'Australia'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h6>' to have text 'India', but the text was 'Australia'\n    at Context.eval (webpack://cypressbcci/./cypress/e2e/testCases/bcciCricketSampleTCs.cy.js:57:31)",
+                "diff": "- 'Australia'\n+ 'India'\n"
+              },
+              "uuid": "0bf7718f-2fa1-4752-8852-38ef2813dd0e",
+              "parentUUID": "e1011f46-5ae6-4c94-9c46-ba40e611a38f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-04 Get ODI Player Rankings",
+              "fullTitle": "BCCI web application Sample Test Cases TC-04 Get ODI Player Rankings",
+              "timedOut": null,
+              "duration": 7537,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(objRepo.menu_Rankings).click();\ncy.xpath(objRepo.btn_ODI).click();\ncy.xpath(objRepo.arrow_playerRankings).click();",
+              "err": {},
+              "uuid": "e8466d7a-8f81-4e8e-805a-502b8dd187a6",
+              "parentUUID": "e1011f46-5ae6-4c94-9c46-ba40e611a38f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29541ca0-1c6a-4554-923c-894f405d58a8",
+            "a702797e-766f-47b9-9ae2-f6d813536065",
+            "e8466d7a-8f81-4e8e-805a-502b8dd187a6"
+          ],
+          "failures": [
+            "0bf7718f-2fa1-4752-8852-38ef2813dd0e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 40845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmDDyyyy_HHmmss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
